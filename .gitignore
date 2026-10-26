@@ -1,0 +1,11 @@
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfplan
+**/terraform.tfvars
+**/backend.hcl
+*.log
+.env
+__pycache__/
+**/.venv/
+function-deploy.zip

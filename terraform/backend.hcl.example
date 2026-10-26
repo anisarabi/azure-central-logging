@@ -1,0 +1,5 @@
+resource_group_name  = "rg-terraform-state"
+storage_account_name = "stterraformstateexample"
+container_name       = "tfstate"
+key                  = "central-logging/dev.tfstate"
+use_azuread_auth     = true

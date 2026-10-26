@@ -1,0 +1,24 @@
+subscription_id       = "00000000-0000-0000-0000-000000000000"
+location              = "westeurope"
+resource_group_name   = "rg-central-logging-dev"
+prefix                = "clog"
+environment           = "dev"
+enable_vm_pipeline    = true
+# Existing Azure VM ARM IDs. Leave empty to deploy platform only.
+linux_vm_ids = {
+  # web01 = "/subscriptions/.../resourceGroups/rg-app/providers/Microsoft.Compute/virtualMachines/vm-linux-01"
+}
+windows_vm_ids = {}
+# Discover categories first: az monitor diagnostic-settings categories list --resource RESOURCE_ID -o table
+platform_resources = {
+  # function_orders = {
+  #   resource_id = "/subscriptions/.../resourceGroups/rg-app/providers/Microsoft.Web/sites/func-orders-prod"
+  #   categories  = ["FunctionAppLogs"]
+  #   hub         = "apps"
+  # }
+  # keyvault = {
+  #   resource_id = "/subscriptions/.../resourceGroups/rg-sec/providers/Microsoft.KeyVault/vaults/kv-prod"
+  #   categories  = ["AuditEvent"]
+  #   hub         = "platform"
+  # }
+}
